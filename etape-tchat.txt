@@ -1,0 +1,64 @@
+﻿1. Arborescence et création des différents fichiers et dossiers
+
+2. Création de la BDD
+
+3. Créer le fichier init.php (connexion, session, constante)
+
+4. creer le formulaire HTML de connexion (index.php)
+
+5. découpage header.php et footer.php
+
+6. contrôle PHP (empty/isset) 
+   + $_SESSION["pseudo"] = $_POST["pseudo"]
+   + header("location:" . URL . "tchat.php");
+   tester la redirection
+
+7. Réaliser le formulaire HTML d'ajout de message 
+
+8. Affichage du membre connecté (<h1>$_SESSION['pseudo']</h1>)
+   Vérification du pseudo existant en session (ligne 2 à 4) 
+   Insérer manuellement plusieurs messages dans la BDD
+   Affichage des messages en PHP (</div id="tchat"></div> ligne 10 à 27) 
+
+9. Réaliser la function loader (tchat.js)
+   + la class loader dans le fichier style.css 
+
+10. Réaliser la function anonyme permettant d'insérer un message  (requete AJAX) , à ce moment la seulement annulation du comportement du bouton submit + function loader
+créer la variable url javascript
+
+11. Réaliser le script 'addMessage' dans le fichier 'tchatAjax.php' (ligne 1 à 24 + json_encode())
+
+12. retourner dans tchat.js et terminer la fonction pour l'insertion de message (sauf clearInterval, setInterval, hideLoader)
+
+13. creer la fonction hideLoader() et l'appeler dans la fonction d'insertion de message
+
+14. créer la variable lastid ligne 2 fichier tchat.js
+
+15. retourner dans header.php et écrire les lignes 14 à 25 permettant de récupérer le dernier id message posté
+
+16. Réaliser la fonction getMessage() dans le fichier 'tchat.js' (ligen 30 à 41) et dans le même temps écrire le traitement PHP dans tchatAjax.php (ligne 32 à 43)
+
+17. Déclarer le timer setInterval() ligne 3 ajax.js 
+
+18. ajouter les lignes 37 et 40 dans tchatAjax.php pour les derniers  id messages (lastid) + ajouter ligne 34 dans ajax.js
+
+19. placer le clearInterval() dans la fonction d'insertion ligne 9 tchat.js te le timer ligne 21, donc une fois le message poster on active le timer, en fait on stop le timer le temps de poster le massage
+
+20. dernièer etape : afficher les tchatteur connectés et vérification de la disponibilté du pseudo
+Fermer tout les navigateurs et réouvrir pour supprimer les sessions
+
+ajouter le table connected pour repèrtioré les utlisateurs connectés (pseudo, ip et dernière date connecté)
+
+21. revenir dans index.php et ecrire les lignes 14 à 33
+    on ajoute l'id du membre connecté dans la session  $_SESSION["idTchat"] = $idTchat;
+
+22. retouner dans le fichier ajax.js et créer la function getConnected() et dans l'index déclaré la div id 'connnected' + creer le timer var ctimer = setInterval(getConnected,10000); ligne 4 ajax.js
+
+23. retourner dans tchatAjax.php et écrire la dernière requête pour afficher les memebres connectés ligne 50 à 63 + retourner dans le fichier ajax.js et ecrire le code manquant  getConnected(); ligne 7 pour avoir au premier affichage tout les membres connectés
+
+
+
+
+
+
+ 
